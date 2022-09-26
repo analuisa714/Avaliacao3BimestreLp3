@@ -1,0 +1,27 @@
+@model Avaliacao3Lp3.ViewModels.LojaViewModel
+
+@{
+    ViewData["Title"] = "Comércio";
+}
+
+<h1>@Model.Nome</h1>
+
+<hr>
+    @if (Model.Loja == true)
+    {
+        <p>Loja</p>
+    } 
+    else
+    {
+        <p>Kiosque</p>
+    }
+
+    <p>Localizada no piso @Model.Piso</p>
+    <p><i>@Model.Descricao</i></p>
+    <p>(Fale conosco: @Model.Email)</p>
+
+    <a href="/Loja/ExcluirLoja/@Model.Id">
+    <button>Excluir Loja</button>
+    </a>
+    
+    <hr>

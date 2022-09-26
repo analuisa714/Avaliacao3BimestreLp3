@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "Cadastro";
+}
+
+<style>
+    div {
+        width: 200px;
+        align-items: center;
+    }
+</style>
+
+<h1>Cadastro - lojas</h1> 
+
+<div>
+    <form method="post" asp-controller="Loja" asp-action="GerarLoja"> 
+    
+    <p>
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" required>
+    </p>
+    
+    <p>
+        <label for="descricao">Descrição:</label>
+        <input type="text" name="descricao" id="descricao" required>
+    </p>
+
+    <p>
+        <label for="email">E-mail:</label>
+        <input type="text" name="email" id="email" required>
+    </p>
+
+    <p>
+        Categoria:
+        <select name="loja">
+        <option value="true">Loja</option>
+        <option value="false">Kiosque</option>
+        </select>
+    </p>
+    
+    <p>
+        Piso:
+        <select name="piso">
+            <option value="1">Piso 1</option>
+            <option value="2">Piso 2</option>
+            <option value="3">Piso 3</option>
+        </select>
+    </p>
+    <input type="submit" value="Cadastrar">
+</form>
+</div>

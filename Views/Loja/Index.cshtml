@@ -1,0 +1,16 @@
+@model List<Avaliacao3Lp3.ViewModels.LojaViewModel>
+
+@{
+    ViewData["Title"] = "Lojas";
+}
+
+<h1>Nossas lojas:</h1>
+
+<hr>
+@foreach(var loja in Model)
+{
+    <a href="/Loja/Detalhes/@loja.Id"><h3>@loja.Nome</h3></a>
+    <hr>
+}
+
+
